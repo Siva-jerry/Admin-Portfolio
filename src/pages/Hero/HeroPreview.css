@@ -1,0 +1,723 @@
+/*==================================================
+HERO PREVIEW
+==================================================*/
+
+.hero-preview{
+
+    position:sticky;
+
+    top:110px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+    padding:32px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(99,102,241,.08);
+
+    box-shadow:
+
+        0 30px 70px rgba(15,23,42,.08);
+
+}
+
+/*==================================================
+BACKGROUND
+==================================================*/
+
+.hero-preview::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    top:-120px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(99,102,241,.18),
+
+            transparent
+
+        );
+
+}
+
+.hero-preview::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    bottom:-100px;
+
+    left:-80px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            rgba(59,130,246,.16),
+
+            transparent
+
+        );
+
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.hero-preview-header{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+}
+
+.preview-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.hero-preview-header h2{
+
+    font-size:1.8rem;
+
+    font-weight:800;
+
+    color:#1E293B;
+
+    margin-bottom:10px;
+
+}
+
+.hero-preview-header p{
+
+    color:#64748B;
+
+    line-height:1.7;
+
+}
+
+/*==================================================
+IMAGE
+==================================================*/
+
+.preview-image-wrapper{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.preview-image{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:6px solid #FFFFFF;
+
+    box-shadow:
+
+        0 25px 45px rgba(79,70,229,.20);
+
+    transition:.35s ease;
+
+}
+
+.preview-image:hover{
+
+    transform:scale(1.04);
+
+}
+
+.preview-image-placeholder{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #EEF2FF,
+
+            #DBEAFE
+
+        );
+
+    color:#4F46E5;
+
+    font-weight:700;
+
+    border:6px solid #FFFFFF;
+
+    box-shadow:
+
+        0 25px 45px rgba(79,70,229,.18);
+
+}
+
+/*==================================================
+CONTENT
+==================================================*/
+
+.preview-content{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+}
+
+.preview-greeting{
+
+    display:block;
+
+    color:#6366F1;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.preview-name{
+
+    font-size:2.4rem;
+
+    font-weight:800;
+
+    line-height:1.2;
+
+    color:#111827;
+
+    margin-bottom:18px;
+
+}
+
+.preview-lastname{
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #6366F1,
+
+            #3B82F6
+
+        );
+
+   background-clip:text;
+
+-webkit-background-clip:text;
+
+color:transparent;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+.preview-description{
+
+    color:#64748B;
+
+    line-height:1.9;
+
+    font-size:.95rem;
+
+    max-width:430px;
+
+    margin:auto;
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+    .hero-preview{
+
+        position:static;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .hero-preview{
+
+        padding:24px;
+
+    }
+
+    .preview-image,
+
+    .preview-image-placeholder{
+
+        width:170px;
+
+        height:170px;
+
+    }
+
+    .preview-name{
+
+        font-size:2rem;
+
+    }
+
+}
+/*==================================================
+PROFESSIONS
+==================================================*/
+
+.preview-professions{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+
+}
+
+.preview-chip{
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        135deg,
+        #EEF2FF,
+        #DBEAFE
+    );
+
+    color:#4F46E5;
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    transition:.35s ease;
+
+    cursor:default;
+
+}
+
+.preview-chip:hover{
+
+    transform:translateY(-3px);
+
+    background:linear-gradient(
+        135deg,
+        #6366F1,
+        #3B82F6
+    );
+
+    color:#FFFFFF;
+
+}
+
+/*==================================================
+BUTTONS
+==================================================*/
+
+.preview-buttons{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:16px;
+
+    flex-wrap:wrap;
+
+}
+
+.preview-primary-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:14px 28px;
+
+    border-radius:16px;
+
+    color:#FFFFFF;
+
+    font-weight:700;
+
+    font-size:.95rem;
+
+    background:linear-gradient(
+        135deg,
+        #6366F1,
+        #3B82F6
+    );
+
+    box-shadow:
+        0 18px 35px rgba(99,102,241,.25);
+
+    transition:.35s ease;
+
+}
+
+.preview-primary-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+        0 25px 45px rgba(99,102,241,.35);
+
+}
+
+.preview-secondary-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:14px 28px;
+
+    border-radius:16px;
+
+    background:#F8FAFC;
+
+    color:#1E293B;
+
+    font-weight:700;
+
+    border:1px solid #CBD5E1;
+
+    transition:.35s ease;
+
+}
+
+.preview-secondary-btn:hover{
+
+    background:#EEF2FF;
+
+    border-color:#6366F1;
+
+    color:#4F46E5;
+
+    transform:translateY(-3px);
+
+}
+
+/*==================================================
+SOCIALS
+==================================================*/
+
+.preview-socials{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:14px;
+
+}
+
+.preview-social{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    width:82px;
+
+    height:82px;
+
+    border-radius:18px;
+
+    background:#FFFFFF;
+
+    border:1px solid rgba(99,102,241,.08);
+
+    box-shadow:
+        0 12px 30px rgba(15,23,42,.05);
+
+    transition:.35s ease;
+
+}
+
+.preview-social:hover{
+
+    transform:translateY(-5px);
+
+    background:#6366F1;
+
+    color:#FFFFFF;
+
+}
+
+.preview-social span{
+
+    font-size:1.4rem;
+
+}
+
+.preview-social small{
+
+    font-size:.72rem;
+
+    font-weight:600;
+
+}
+
+/*==================================================
+STATS
+==================================================*/
+
+.preview-stats{
+
+    position:relative;
+
+    z-index:2;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+
+}
+
+.preview-stat-card{
+
+    padding:22px;
+
+    border-radius:20px;
+
+    background:linear-gradient(
+        135deg,
+        #FFFFFF,
+        #F8FAFC
+    );
+
+    border:1px solid rgba(99,102,241,.08);
+
+    text-align:center;
+
+    transition:.35s ease;
+
+    box-shadow:
+        0 15px 30px rgba(15,23,42,.05);
+
+}
+
+.preview-stat-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#6366F1;
+
+    box-shadow:
+        0 25px 45px rgba(99,102,241,.12);
+
+}
+
+.preview-stat-card h3{
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    color:#4F46E5;
+
+    margin-bottom:8px;
+
+}
+
+.preview-stat-card span{
+
+    color:#64748B;
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+/*==================================================
+ANIMATION
+==================================================*/
+
+.preview-chip,
+
+.preview-primary-btn,
+
+.preview-secondary-btn,
+
+.preview-social,
+
+.preview-stat-card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        background .35s ease,
+        color .35s ease;
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    .preview-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .preview-primary-btn,
+
+    .preview-secondary-btn{
+
+        width:100%;
+
+    }
+
+    .preview-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .preview-social{
+
+        width:72px;
+
+        height:72px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .preview-professions{
+
+        justify-content:flex-start;
+
+    }
+
+    .preview-chip{
+
+        font-size:.78rem;
+
+        padding:8px 14px;
+
+    }
+
+}

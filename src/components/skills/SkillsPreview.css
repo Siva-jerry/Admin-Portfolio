@@ -1,0 +1,361 @@
+/*==================================================
+SKILLS PREVIEW
+==================================================*/
+
+.skills-preview{
+
+    position:sticky;
+
+    top:110px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+    padding:34px;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.94);
+
+    backdrop-filter:blur(20px);
+
+    border:1px solid rgba(99,102,241,.08);
+
+    box-shadow:
+        0 30px 70px rgba(15,23,42,.08);
+
+}
+
+/*==================================================
+BACKGROUND
+==================================================*/
+
+.skills-preview::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+
+    height:300px;
+
+    top:-140px;
+
+    right:-120px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            rgba(99,102,241,.18),
+            transparent
+        );
+
+}
+
+.skills-preview::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:220px;
+
+    height:220px;
+
+    bottom:-100px;
+
+    left:-70px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            rgba(37,99,235,.15),
+            transparent
+        );
+
+}
+
+/*==================================================
+LOADING
+==================================================*/
+
+.skills-preview-loading{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:300px;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#64748B;
+
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.skills-preview-header{
+
+    position:relative;
+
+    z-index:2;
+
+    text-align:center;
+
+}
+
+.skills-preview-header span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+.skills-preview-header h2{
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    color:#111827;
+
+    margin-bottom:12px;
+
+}
+
+.skills-preview-header p{
+
+    color:#64748B;
+
+    line-height:1.8;
+
+}
+
+/*==================================================
+LIST
+==================================================*/
+
+.skills-preview-list{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+/*==================================================
+SKILL CARD
+==================================================*/
+
+.skill-preview-card{
+
+    background:#FFFFFF;
+
+    border:1px solid #EEF2FF;
+
+    border-radius:18px;
+
+    padding:20px;
+
+    transition:.35s ease;
+
+    box-shadow:
+        0 10px 25px rgba(15,23,42,.05);
+
+}
+
+.skill-preview-card:hover{
+
+    transform:translateY(-4px);
+
+    border-color:#6366F1;
+
+    box-shadow:
+        0 20px 40px rgba(99,102,241,.12);
+
+}
+
+/*==================================================
+TOP
+==================================================*/
+
+.skill-preview-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:14px;
+
+}
+
+.skill-preview-top h3{
+
+    margin:0;
+
+    color:#111827;
+
+    font-size:17px;
+
+    font-weight:700;
+
+}
+
+.skill-preview-top span{
+
+    display:inline-block;
+
+    margin-top:5px;
+
+    color:#6366F1;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.skill-preview-top strong{
+
+    color:#111827;
+
+    font-size:18px;
+
+    font-weight:800;
+
+}
+
+/*==================================================
+PROGRESS BAR
+==================================================*/
+
+.skill-progress{
+
+    width:100%;
+
+    height:10px;
+
+    border-radius:999px;
+
+    overflow:hidden;
+
+    background:#E5E7EB;
+
+}
+
+.skill-progress-fill{
+
+    height:100%;
+
+    border-radius:999px;
+
+    transition:
+        width .6s ease,
+        background .3s ease;
+
+}
+
+/*==================================================
+HOVER EFFECT
+==================================================*/
+
+.skill-preview-card:hover .skill-progress-fill{
+
+    filter:brightness(1.08);
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+    .skills-preview{
+
+        position:static;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .skills-preview{
+
+        padding:24px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .skills-preview{
+
+        padding:20px;
+
+    }
+
+    .skills-preview-header h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .skill-preview-top{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:8px;
+
+    }
+
+    .skill-preview-top strong{
+
+        align-self:flex-end;
+
+    }
+
+}

@@ -1,0 +1,631 @@
+/*==================================================
+ROOT
+==================================================*/
+
+.certificates-form{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.certificates-form-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:26px 30px;
+
+    border-radius:22px;
+
+    background:#fff;
+
+    box-shadow:0 12px 40px rgba(15,23,42,.08);
+
+}
+
+.certificates-form-header h2{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#0f172a;
+
+    margin-bottom:6px;
+
+}
+
+.certificates-form-header p{
+
+    color:#64748b;
+
+    font-size:15px;
+
+}
+
+/*==================================================
+HEADER BUTTONS
+==================================================*/
+
+.certificates-actions{
+
+    display:flex;
+
+    gap:14px;
+
+}
+
+.certificates-refresh,
+
+.certificates-add{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:14px;
+
+    padding:13px 22px;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.certificates-refresh{
+
+    background:#f8fafc;
+
+    color:#334155;
+
+}
+
+.certificates-refresh:hover{
+
+    background:#e2e8f0;
+
+}
+
+.certificates-add{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #4f46e5,
+
+        #7c3aed
+
+    );
+
+    color:#fff;
+
+    box-shadow:0 12px 25px rgba(79,70,229,.28);
+
+}
+
+.certificates-add:hover{
+
+    transform:translateY(-2px);
+
+}
+/*==================================================
+LIST
+==================================================*/
+
+.certificates-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+/*==================================================
+CARD
+==================================================*/
+
+.certificate-card{
+
+    background:#ffffff;
+
+    border-radius:24px;
+
+    padding:28px;
+
+    border:1px solid rgba(99,102,241,.08);
+
+    box-shadow:
+
+        0 18px 45px rgba(15,23,42,.08);
+
+    transition:.35s ease;
+
+}
+
+.certificate-card:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:
+
+        0 28px 55px rgba(99,102,241,.12);
+
+}
+
+/*==================================================
+IMAGE
+==================================================*/
+
+.certificate-image-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:28px;
+
+}
+
+.certificate-image-preview{
+
+    width:240px;
+
+    height:170px;
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    border:2px dashed #CBD5E1;
+
+    background:#F8FAFC;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.certificate-image-preview img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.certificate-image-placeholder{
+
+    color:#94A3B8;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+
+.certificate-upload-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    padding:12px 22px;
+
+    border-radius:14px;
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+.certificate-upload-btn:hover{
+
+    background:#E0E7FF;
+
+    transform:translateY(-2px);
+
+}
+
+.certificate-upload-btn input{
+
+    display:none;
+
+}
+
+.certificate-image-section small{
+
+    color:#64748B;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    text-align:center;
+
+}
+
+/*==================================================
+GRID
+==================================================*/
+
+.certificate-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    margin-top:24px;
+
+}
+
+.certificate-full{
+
+    grid-column:1/-1;
+
+}
+
+/*==================================================
+FIELDS
+==================================================*/
+
+.certificate-field{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.certificate-field label{
+
+    color:#334155;
+
+    font-size:.92rem;
+
+    font-weight:700;
+
+}
+
+.certificate-field input,
+
+.certificate-field select,
+
+.certificate-field textarea{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border-radius:14px;
+
+    border:1px solid #E2E8F0;
+
+    background:#FFFFFF;
+
+    color:#1E293B;
+
+    font-size:.95rem;
+
+    outline:none;
+
+    transition:.3s ease;
+
+}
+
+.certificate-field input:focus,
+
+.certificate-field select:focus,
+
+.certificate-field textarea:focus{
+
+    border-color:#6366F1;
+
+    box-shadow:
+
+        0 0 0 4px rgba(99,102,241,.10);
+
+}
+/*==================================================
+ACTION BUTTONS
+==================================================*/
+
+.certificate-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:18px;
+
+    margin-top:36px;
+
+}
+
+.certificate-save,
+
+.certificate-delete{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px 26px;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+.certificate-save{
+
+    color:#FFFFFF;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #6366F1,
+
+        #3B82F6
+
+    );
+
+    box-shadow:
+
+        0 16px 28px rgba(99,102,241,.22);
+
+}
+
+.certificate-save:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.certificate-delete{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+}
+
+.certificate-delete:hover{
+
+    background:#FECACA;
+
+}
+
+/*==================================================
+LOADING
+==================================================*/
+
+.certificates-loading{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:350px;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    color:#6366F1;
+
+}
+
+/*==================================================
+SCROLLBAR
+==================================================*/
+
+.certificates-form textarea::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.certificates-form textarea::-webkit-scrollbar-thumb{
+
+    background:#CBD5E1;
+
+    border-radius:20px;
+
+}
+
+.certificates-form textarea::-webkit-scrollbar-thumb:hover{
+
+    background:#94A3B8;
+
+}
+
+/*==================================================
+CARD ANIMATION
+==================================================*/
+
+.certificate-card{
+
+    animation:certificateFade .45s ease;
+
+}
+
+@keyframes certificateFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+    .certificates-form-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .certificates-actions{
+
+        width:100%;
+
+        flex-wrap:wrap;
+
+    }
+
+    .certificate-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .certificate-full{
+
+        grid-column:auto;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .certificate-card{
+
+        padding:22px;
+
+    }
+
+    .certificate-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .certificate-save,
+
+    .certificate-delete{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .certificates-form-header{
+
+        padding:22px;
+
+    }
+
+    .certificates-actions{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .certificates-refresh,
+
+    .certificates-add{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .certificate-image-preview{
+
+        width:100%;
+
+        max-width:280px;
+
+        height:180px;
+
+    }
+
+    .certificate-upload-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}

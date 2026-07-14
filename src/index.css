@@ -1,0 +1,205 @@
+/*==================================================
+GOOGLE FONT
+==================================================*/
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+/*==================================================
+RESET
+==================================================*/
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:#F4F7FC;
+
+    color:#1F2937;
+
+    overflow-x:hidden;
+
+    -webkit-font-smoothing:antialiased;
+
+    -moz-osx-font-smoothing:grayscale;
+
+}
+
+#root{
+
+    width:100%;
+
+    min-height:100vh;
+
+}
+
+/*==================================================
+COMMON
+==================================================*/
+
+button{
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+}
+
+input,
+
+textarea,
+
+select{
+
+    font-family:inherit;
+
+    outline:none;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+/*==================================================
+LAYOUT
+==================================================*/
+
+.admin-layout{
+
+    display:flex;
+
+    min-height:100vh;
+
+    width:100%;
+
+}
+
+.admin-main{
+
+    flex:1;
+
+    min-width:0;
+
+    min-height:100vh;
+
+    background:#F4F7FC;
+
+    overflow-x:hidden;
+
+    transition:.35s ease;
+
+}
+
+/*==================================================
+SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ECEFF5;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#6366F1;
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#4F46E5;
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:991px){
+
+    .admin-layout{
+
+        display:flex;
+
+    }
+
+    .admin-main{
+
+        min-width:0;
+
+    }
+
+}
+
+/*==================================================
+APP TRANSITIONS
+==================================================*/
+
+.page-fade{
+
+    animation:pageFade .45s ease;
+
+}
+
+@keyframes pageFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

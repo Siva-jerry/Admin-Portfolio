@@ -1,0 +1,151 @@
+/*==================================================
+PAGE
+==================================================*/
+
+.gallery-page{
+
+    width:100%;
+
+    min-height:100vh;
+
+    padding:32px;
+
+    background:#F8FAFC;
+
+}
+
+/*==================================================
+GRID
+==================================================*/
+
+.gallery-page-grid{
+
+    display:grid;
+
+    grid-template-columns:1.3fr .9fr;
+
+    gap:30px;
+
+    align-items:start;
+
+}
+
+/*==================================================
+PREVIEW
+==================================================*/
+
+.gallery-preview-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    position:sticky;
+
+    top:24px;
+
+}
+
+/*==================================================
+EMPTY
+==================================================*/
+
+.gallery-preview-empty{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:350px;
+
+    background:#FFFFFF;
+
+    border:2px dashed #CBD5E1;
+
+    border-radius:24px;
+
+    color:#64748B;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    box-shadow:
+
+        0 12px 30px rgba(15,23,42,.08);
+
+}
+
+/*==================================================
+LOADING
+==================================================*/
+
+.gallery-page-loading{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:70vh;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#64748B;
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:1200px){
+
+    .gallery-page-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .gallery-preview-section{
+
+        position:static;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .gallery-page{
+
+        padding:20px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .gallery-page{
+
+        padding:16px;
+
+    }
+
+    .gallery-preview-empty{
+
+        min-height:250px;
+
+        font-size:16px;
+
+    }
+
+}

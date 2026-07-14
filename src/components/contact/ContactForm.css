@@ -1,0 +1,363 @@
+/*==================================================
+MAIN CONTAINER
+==================================================*/
+
+.contact-form{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.contact-form-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:24px;
+
+    padding:28px 30px;
+
+    border-radius:24px;
+
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+
+    box-shadow:
+
+        0 10px 35px rgba(15,23,42,.08);
+
+}
+
+.contact-form-header h2{
+
+    margin:0;
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+}
+
+.contact-form-header p{
+
+    margin-top:8px;
+
+    color:#64748B;
+
+    line-height:1.6;
+
+}
+
+/*==================================================
+REFRESH BUTTON
+==================================================*/
+
+.contact-refresh{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:13px 24px;
+
+    border-radius:14px;
+
+    background:#F8FAFC;
+
+    color:#334155;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.30s;
+
+}
+
+.contact-refresh:hover{
+
+    background:#E2E8F0;
+
+}
+/*==================================================
+FORM GRID
+==================================================*/
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        repeat(2,minmax(250px,1fr));
+
+    gap:24px;
+
+    padding:30px;
+
+    border-radius:24px;
+
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+
+    box-shadow:
+
+        0 12px 35px rgba(15,23,42,.08);
+
+}
+
+/*==================================================
+FULL WIDTH
+==================================================*/
+
+.contact-full{
+
+    grid-column:1/-1;
+
+}
+
+/*==================================================
+FIELD
+==================================================*/
+
+.contact-field{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.contact-field label{
+
+    font-size:14px;
+
+    font-weight:600;
+
+    color:#334155;
+
+}
+
+/*==================================================
+INPUT
+==================================================*/
+
+.contact-field input{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:1px solid #CBD5E1;
+
+    border-radius:14px;
+
+    background:#FFFFFF;
+
+    color:#0F172A;
+
+    font-size:15px;
+
+    font-family:inherit;
+
+    outline:none;
+
+    transition:.30s;
+
+}
+
+.contact-field input::placeholder{
+
+    color:#94A3B8;
+
+}
+
+.contact-field input:focus{
+
+    border-color:#4F46E5;
+
+    box-shadow:
+
+        0 0 0 4px rgba(79,70,229,.12);
+
+}
+/*==================================================
+ACTIONS
+==================================================*/
+
+.contact-actions{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+}
+
+.contact-save{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:14px 28px;
+
+    border-radius:14px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #4F46E5,
+
+            #7C3AED
+
+        );
+
+    color:#FFFFFF;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.30s;
+
+    box-shadow:
+
+        0 12px 24px rgba(79,70,229,.25);
+
+}
+
+.contact-save:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+
+        0 18px 32px rgba(79,70,229,.35);
+
+}
+
+/*==================================================
+LOADING
+==================================================*/
+
+.contact-form-loading{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:70vh;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    color:#64748B;
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+    .contact-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .contact-form-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .contact-refresh{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .contact-actions{
+
+        justify-content:stretch;
+
+    }
+
+    .contact-save{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .contact-form-header{
+
+        padding:22px;
+
+    }
+
+    .contact-grid{
+
+        padding:22px;
+
+    }
+
+    .contact-form-header h2{
+
+        font-size:24px;
+
+    }
+
+}

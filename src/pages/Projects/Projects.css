@@ -1,0 +1,111 @@
+/*==================================================
+PROJECTS PAGE
+==================================================*/
+
+.projects-page{
+
+    display:grid;
+
+    grid-template-columns:1.65fr .95fr;
+
+    gap:32px;
+
+    align-items:start;
+
+    padding:32px;
+
+    min-height:100%;
+
+}
+
+/*==================================================
+LEFT
+==================================================*/
+
+.projects-left{
+
+    min-width:0;
+
+}
+
+/*==================================================
+RIGHT
+==================================================*/
+
+.projects-right{
+
+    position:sticky;
+
+    top:30px;
+
+    min-width:340px;
+
+}
+
+/*==================================================
+LARGE SCREEN
+==================================================*/
+
+@media(max-width:1400px){
+
+    .projects-page{
+
+        grid-template-columns:1.4fr .9fr;
+
+    }
+
+}
+
+/*==================================================
+TABLET
+==================================================*/
+
+@media(max-width:1100px){
+
+    .projects-page{
+
+        grid-template-columns:1fr;
+
+        gap:28px;
+
+        padding:24px;
+
+    }
+
+    .projects-right{
+
+        position:static;
+
+        min-width:100%;
+
+    }
+
+}
+
+/*==================================================
+MOBILE
+==================================================*/
+
+@media(max-width:768px){
+
+    .projects-page{
+
+        padding:18px;
+
+        gap:20px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .projects-page{
+
+        padding:14px;
+
+        gap:16px;
+
+    }
+
+}

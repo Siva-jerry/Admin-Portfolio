@@ -1,0 +1,288 @@
+/*==================================================
+EXPERIENCE PREVIEW CONTAINER
+==================================================*/
+.experience-preview {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 32px;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 
+        0 4px 6px -1px rgba(0, 0, 0, 0.05),
+        0 10px 15px -3px rgba(0, 0, 0, 0.03),
+        0 20px 25px -5px rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+/*==================================================
+HEADER (Fixed Overlapping Text)
+==================================================*/
+.experience-preview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    border-bottom: 1px dashed #e2e8f0;
+    padding-bottom: 20px;
+}
+
+.experience-preview-header h2 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+}
+
+/* If you have a small 'MY EXPERIENCE' label text above/inside your header */
+.experience-preview-header h2 span {
+    display: block;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #6366f1;
+    margin-bottom: 6px;
+    font-weight: 700;
+}
+
+.experience-preview-header p {
+    margin: 4px 0 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+/*==================================================
+LIST
+==================================================*/
+.experience-preview-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/*==================================================
+CARD (Premium Glass/Gradient Effect)
+==================================================*/
+.experience-preview-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start; /* Changed to start so content flows nicely */
+    gap: 20px;
+    padding: 24px;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid #f1f5f9;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.experience-preview-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(99, 102, 241, 0.25);
+    box-shadow: 
+        0 12px 20px -8px rgba(99, 102, 241, 0.15),
+        0 4px 12px -2px rgba(99, 102, 241, 0.05);
+}
+
+/*==================================================
+FEATURED BADGE
+==================================================*/
+.experience-featured {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+/*==================================================
+LOGO (Fixed Image Constraints & Adaptive Container)
+==================================================*/
+.experience-logo {
+    width: 64px;       /* Sleeker, modern size */
+    height: 64px;      /* Perfect 1:1 Aspect Ratio */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8fafc;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    padding: 8px;      /* Generous padding for clean presentation */
+    overflow: hidden;  /* Keeps uploaded layout contained */
+}
+
+/* This guarantees full view of any uploaded image aspect ratio */
+.experience-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Ensures full aspect ratio view without distortion */
+    object-position: center;
+}
+
+.experience-placeholder {
+    color: #94a3b8;
+    font-size: 11px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/*==================================================
+CONTENT
+==================================================*/
+.experience-preview-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-right: 90px; /* Leaves clean breathing space for the featured badge */
+}
+
+.experience-company {
+    color: #4f46e5;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.experience-role {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+}
+
+/*==================================================
+META DETAILS
+==================================================*/
+.experience-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 6px;
+}
+
+.experience-meta span {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #475569;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid #e2e8f0;
+}
+
+.experience-meta svg {
+    color: #6366f1;
+    font-size: 14px;
+}
+
+/*==================================================
+DESCRIPTION
+==================================================*/
+.experience-preview-content p {
+    margin: 8px 0 0;
+    color: #475569;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/*==================================================
+TECHNOLOGIES
+==================================================*/
+.experience-tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.experience-tech {
+    padding: 4px 12px;
+    border-radius: 6px;
+    background: #f1f5f9;
+    color: #334155;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.experience-tech:hover {
+    transform: translateY(-1px);
+    background: #6366f1;
+    color: #ffffff;
+    border-color: #6366f1;
+}
+
+/*==================================================
+EMPTY STATE
+==================================================*/
+.experience-preview-empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    border-radius: 16px;
+    border: 2px dashed #cbd5e1;
+    color: #94a3b8;
+    font-size: 15px;
+    font-weight: 600;
+    background: #f8fafc;
+}
+
+/*==================================================
+RESPONSIVE REFACTOR
+==================================================*/
+@media(max-width: 992px){
+    .experience-preview-card {
+        padding: 20px;
+    }
+}
+
+@media(max-width: 768px){
+    .experience-preview {
+        padding: 20px;
+    }
+    .experience-preview-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        position: relative;
+    }
+    .experience-preview-content {
+        padding-right: 0;
+        width: 100%;
+    }
+    .experience-featured {
+        position: static;
+        align-self: flex-start;
+        margin-bottom: 4px;
+    }
+    .experience-role {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 576px){
+    .experience-meta span {
+        width: 100%;
+        justify-content: flex-start;
+    }
+}

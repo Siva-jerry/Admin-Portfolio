@@ -1,0 +1,434 @@
+/*==================================================
+TESTIMONIAL PREVIEW CARD
+==================================================*/
+
+.testimonial-preview-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:24px;
+
+    box-shadow:
+        0 12px 35px rgba(15,23,42,.08);
+
+    transition:.35s;
+
+}
+
+.testimonial-preview-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 24px 50px rgba(15,23,42,.15);
+
+}
+
+/*==================================================
+FEATURED BADGE
+==================================================*/
+
+.testimonial-featured{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        135deg,
+        #F59E0B,
+        #F97316
+    );
+
+    color:#FFFFFF;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    z-index:5;
+
+    box-shadow:
+        0 10px 20px rgba(245,158,11,.35);
+
+}
+
+/*==================================================
+IMAGE
+==================================================*/
+
+.testimonial-preview-image{
+
+    width:100%;
+
+    aspect-ratio:16/10;
+
+    overflow:hidden;
+
+    background:#F8FAFC;
+
+}
+
+.testimonial-preview-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.testimonial-preview-card:hover
+.testimonial-preview-image img{
+
+    transform:scale(1.06);
+
+}
+
+/*==================================================
+PLACEHOLDER
+==================================================*/
+
+.testimonial-preview-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#94A3B8;
+
+    font-size:64px;
+
+}
+/*==================================================
+CONTENT
+==================================================*/
+
+.testimonial-preview-content{
+
+    padding:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/*==================================================
+COMPANY
+==================================================*/
+
+.testimonial-preview-company{
+
+    align-self:flex-start;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+    text-transform:uppercase;
+
+}
+
+/*==================================================
+CLIENT NAME
+==================================================*/
+
+.testimonial-preview-name{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+    line-height:1.4;
+
+}
+
+/*==================================================
+ROLE
+==================================================*/
+
+.testimonial-preview-role{
+
+    margin:-8px 0 0;
+
+    color:#6366F1;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+/*==================================================
+MESSAGE
+==================================================*/
+
+.testimonial-preview-message{
+
+    margin:0;
+
+    color:#64748B;
+
+    line-height:1.8;
+
+    font-size:15px;
+
+}
+
+/*==================================================
+RATING
+==================================================*/
+
+.testimonial-preview-rating{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+}
+
+.testimonial-star{
+
+    font-size:20px;
+
+    color:#CBD5E1;
+
+}
+
+.testimonial-star.active{
+
+    color:#F59E0B;
+
+}
+
+/*==================================================
+META
+==================================================*/
+
+.testimonial-preview-meta{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+.testimonial-meta-row{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    background:#F8FAFC;
+
+    border:1px solid #E2E8F0;
+
+}
+
+.testimonial-meta-row span{
+
+    color:#64748B;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+.testimonial-meta-row strong{
+
+    color:#0F172A;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+/*==================================================
+STATUS & ANIMATIONS
+==================================================*/
+
+.testimonial-preview-card,
+
+.testimonial-preview-image img,
+
+.testimonial-star{
+
+    transition:all .30s ease;
+
+}
+
+.testimonial-preview-card:hover
+.testimonial-star.active{
+
+    transform:scale(1.08);
+
+}
+
+/*==================================================
+SCROLLBAR (MESSAGE)
+==================================================*/
+
+.testimonial-preview-message::-webkit-scrollbar{
+
+    width:6px;
+
+}
+
+.testimonial-preview-message::-webkit-scrollbar-thumb{
+
+    background:#CBD5E1;
+
+    border-radius:999px;
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+    .testimonial-preview-name{
+
+        font-size:22px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .testimonial-preview-content{
+
+        padding:20px;
+
+        gap:16px;
+
+    }
+
+    .testimonial-preview-name{
+
+        font-size:20px;
+
+    }
+
+    .testimonial-meta-row{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:8px;
+
+    }
+
+    .testimonial-preview-rating{
+
+        flex-wrap:wrap;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .testimonial-preview-content{
+
+        padding:16px;
+
+    }
+
+    .testimonial-preview-name{
+
+        font-size:18px;
+
+    }
+
+    .testimonial-preview-role{
+
+        font-size:14px;
+
+    }
+
+    .testimonial-preview-message{
+
+        font-size:14px;
+
+        line-height:1.7;
+
+    }
+
+    .testimonial-featured{
+
+        top:12px;
+
+        right:12px;
+
+        padding:6px 12px;
+
+        font-size:12px;
+
+    }
+
+    .testimonial-star{
+
+        font-size:18px;
+
+    }
+
+}

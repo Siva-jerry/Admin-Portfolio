@@ -1,0 +1,147 @@
+/*==================================================
+CERTIFICATES PAGE
+==================================================*/
+
+.certificates-page{
+
+    width:100%;
+
+    padding:32px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+/*==================================================
+GRID
+==================================================*/
+
+.certificates-page-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+        minmax(0,1.7fr)
+
+        minmax(360px,.9fr);
+
+    gap:30px;
+
+    align-items:start;
+
+}
+
+/*==================================================
+LOADING
+==================================================*/
+
+.certificates-page-loading{
+
+    min-height:70vh;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    color:#6366F1;
+
+}
+
+/*==================================================
+STICKY PREVIEW
+==================================================*/
+
+.certificates-page-grid > :last-child{
+
+    position:sticky;
+
+    top:100px;
+
+}
+
+/*==================================================
+PAGE ANIMATION
+==================================================*/
+
+.certificates-page{
+
+    animation:
+
+        certificatesFade .45s ease;
+
+}
+
+@keyframes certificatesFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+TABLET
+==================================================*/
+
+@media(max-width:1200px){
+
+    .certificates-page-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .certificates-page-grid > :last-child{
+
+        position:static;
+
+    }
+
+}
+
+/*==================================================
+MOBILE
+==================================================*/
+
+@media(max-width:768px){
+
+    .certificates-page{
+
+        padding:22px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .certificates-page{
+
+        padding:16px;
+
+    }
+
+}

@@ -1,0 +1,373 @@
+/*==================================================
+GALLERY PREVIEW CARD
+==================================================*/
+
+.gallery-preview-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#FFFFFF;
+
+    border:1px solid #E2E8F0;
+
+    border-radius:24px;
+
+    box-shadow:
+        0 12px 35px rgba(15,23,42,.08);
+
+    transition:.35s;
+
+}
+
+.gallery-preview-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+        0 24px 50px rgba(15,23,42,.15);
+
+}
+
+/*==================================================
+FEATURED BADGE
+==================================================*/
+
+.gallery-featured{
+
+    position:absolute;
+
+    top:18px;
+
+    right:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:linear-gradient(
+        135deg,
+        #F59E0B,
+        #F97316
+    );
+
+    color:#FFFFFF;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    z-index:5;
+
+    box-shadow:
+        0 10px 20px rgba(245,158,11,.35);
+
+}
+
+/*==================================================
+IMAGE
+==================================================*/
+
+.gallery-preview-image{
+
+    width:100%;
+
+    aspect-ratio:16/10;
+
+    overflow:hidden;
+
+    background:#F8FAFC;
+
+}
+
+.gallery-preview-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.45s;
+
+}
+
+.gallery-preview-card:hover
+.gallery-preview-image img{
+
+    transform:scale(1.06);
+
+}
+
+/*==================================================
+PLACEHOLDER
+==================================================*/
+
+.gallery-preview-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#94A3B8;
+
+    font-size:64px;
+
+}
+/*==================================================
+CONTENT
+==================================================*/
+
+.gallery-preview-content{
+
+    padding:24px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+/*==================================================
+CATEGORY
+==================================================*/
+
+.gallery-preview-category{
+
+    align-self:flex-start;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.4px;
+
+    text-transform:uppercase;
+
+}
+
+/*==================================================
+TITLE
+==================================================*/
+
+.gallery-preview-title{
+
+    margin:0;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    color:#0F172A;
+
+    line-height:1.4;
+
+}
+
+/*==================================================
+META
+==================================================*/
+
+.gallery-preview-meta,
+
+.gallery-preview-status{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:14px 18px;
+
+    border-radius:14px;
+
+    background:#F8FAFC;
+
+    border:1px solid #E2E8F0;
+
+}
+
+.gallery-preview-meta span,
+
+.gallery-preview-status span{
+
+    color:#64748B;
+
+    font-size:14px;
+
+    font-weight:500;
+
+}
+
+.gallery-preview-meta strong{
+
+    color:#0F172A;
+
+    font-size:15px;
+
+    font-weight:700;
+
+}
+/*==================================================
+STATUS BADGES
+==================================================*/
+
+.gallery-status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:.3px;
+
+}
+
+.gallery-status.featured{
+
+    color:#FFFFFF;
+
+    background:linear-gradient(
+        135deg,
+        #F59E0B,
+        #F97316
+    );
+
+    box-shadow:
+        0 8px 18px rgba(245,158,11,.30);
+
+}
+
+.gallery-status.normal{
+
+    color:#475569;
+
+    background:#E2E8F0;
+
+}
+
+/*==================================================
+ANIMATIONS
+==================================================*/
+
+.gallery-preview-card,
+
+.gallery-preview-image img,
+
+.gallery-status{
+
+    transition:all .30s ease;
+
+}
+
+.gallery-preview-card:hover
+.gallery-status.featured{
+
+    transform:scale(1.04);
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+    .gallery-preview-title{
+
+        font-size:22px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .gallery-preview-content{
+
+        padding:20px;
+
+        gap:16px;
+
+    }
+
+    .gallery-preview-title{
+
+        font-size:20px;
+
+    }
+
+    .gallery-preview-meta,
+
+    .gallery-preview-status{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+        gap:8px;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    .gallery-preview-title{
+
+        font-size:18px;
+
+    }
+
+    .gallery-featured{
+
+        top:12px;
+
+        right:12px;
+
+        padding:6px 12px;
+
+        font-size:12px;
+
+    }
+
+    .gallery-preview-content{
+
+        padding:16px;
+
+    }
+
+}

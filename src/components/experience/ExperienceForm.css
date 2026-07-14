@@ -1,0 +1,844 @@
+/*==================================================
+EXPERIENCE FORM
+==================================================*/
+
+.experience-form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+/*==================================================
+HEADER
+==================================================*/
+
+.experience-form-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:24px;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(99,102,241,.08);
+
+    box-shadow:
+        0 24px 60px rgba(15,23,42,.08);
+
+}
+
+.experience-form-header h2{
+
+    font-size:2rem;
+
+    font-weight:800;
+
+    color:#111827;
+
+    margin-bottom:10px;
+
+}
+
+.experience-form-header p{
+
+    color:#64748B;
+
+    line-height:1.7;
+
+}
+
+.experience-actions{
+
+    display:flex;
+
+    gap:16px;
+
+}
+
+.experience-refresh,
+
+.experience-add{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:14px 24px;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+.experience-refresh{
+
+    background:#F8FAFC;
+
+    color:#334155;
+
+    border:1px solid #E2E8F0;
+
+}
+
+.experience-refresh:hover{
+
+    background:#EEF2FF;
+
+    border-color:#6366F1;
+
+}
+
+.experience-add{
+
+    color:#FFFFFF;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #6366F1,
+
+        #3B82F6
+
+    );
+
+    box-shadow:
+
+        0 16px 30px rgba(99,102,241,.22);
+
+}
+
+.experience-add:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/*==================================================
+LIST
+==================================================*/
+
+.experience-list{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+
+}
+
+/*==================================================
+CARD
+==================================================*/
+
+.experience-card{
+
+    background:#FFFFFF;
+
+    border-radius:26px;
+
+    padding:28px;
+
+    border:1px solid rgba(99,102,241,.08);
+
+    box-shadow:
+
+        0 18px 40px rgba(15,23,42,.06);
+
+    transition:.35s ease;
+
+}
+
+.experience-card:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#6366F1;
+
+    box-shadow:
+
+        0 28px 55px rgba(99,102,241,.14);
+
+}
+
+/*==================================================
+IMAGE
+==================================================*/
+
+.experience-image-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:16px;
+
+    margin-bottom:28px;
+
+}
+
+.experience-image-preview{
+
+    width:220px;
+
+    height:220px;
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    border:2px dashed #CBD5E1;
+
+    background:#F8FAFC;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+.experience-image-preview img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.experience-image-placeholder{
+
+    color:#94A3B8;
+
+    font-weight:700;
+
+    font-size:15px;
+
+}
+
+.experience-upload-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    cursor:pointer;
+
+    padding:12px 22px;
+
+    border-radius:12px;
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+.experience-upload-btn:hover{
+
+    background:#E0E7FF;
+
+    transform:translateY(-2px);
+
+}
+
+.experience-upload-btn input{
+
+    display:none;
+
+}
+/*==================================================
+FORM GRID
+==================================================*/
+
+.experience-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    margin-top:30px;
+
+}
+
+.experience-full{
+
+    grid-column:1/-1;
+
+}
+
+/*==================================================
+FIELDS
+==================================================*/
+
+.experience-field{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.experience-field label{
+
+    color:#334155;
+
+    font-size:.92rem;
+
+    font-weight:700;
+
+}
+
+.experience-field input,
+
+.experience-field textarea,
+
+.experience-field select{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border-radius:14px;
+
+    border:1px solid #E2E8F0;
+
+    background:#FFFFFF;
+
+    color:#1E293B;
+
+    font-size:.95rem;
+
+    transition:.3s ease;
+
+    outline:none;
+
+}
+
+.experience-field textarea{
+
+    resize:vertical;
+
+    min-height:130px;
+
+}
+
+.experience-field input:focus,
+
+.experience-field textarea:focus,
+
+.experience-field select:focus{
+
+    border-color:#6366F1;
+
+    box-shadow:
+
+        0 0 0 4px rgba(99,102,241,.10);
+
+}
+
+/*==================================================
+SECTION
+==================================================*/
+
+.experience-section{
+
+    margin-top:36px;
+
+    padding-top:30px;
+
+    border-top:1px solid #E5E7EB;
+
+}
+
+.experience-section-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:22px;
+
+}
+
+.experience-section-header h3{
+
+    color:#111827;
+
+    font-size:1.1rem;
+
+    font-weight:800;
+
+}
+
+.experience-add-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:12px 20px;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+
+        135deg,
+
+        #6366F1,
+
+        #3B82F6
+
+    );
+
+    color:#FFFFFF;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+    box-shadow:
+
+        0 12px 24px rgba(99,102,241,.18);
+
+}
+
+.experience-add-btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/*==================================================
+TECHNOLOGY ROW
+==================================================*/
+
+.technology-row{
+
+    display:flex;
+
+    gap:16px;
+
+    margin-bottom:16px;
+
+}
+
+.technology-row input{
+
+    flex:1;
+
+    padding:14px 16px;
+
+    border-radius:14px;
+
+    border:1px solid #E2E8F0;
+
+    outline:none;
+
+    transition:.3s ease;
+
+}
+
+.technology-row input:focus{
+
+    border-color:#6366F1;
+
+    box-shadow:
+
+        0 0 0 4px rgba(99,102,241,.10);
+
+}
+
+.delete-btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:0 22px;
+
+    border-radius:12px;
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+.delete-btn:hover{
+
+    background:#FECACA;
+
+}
+
+/*==================================================
+BUTTONS
+==================================================*/
+
+.experience-buttons{
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    gap:18px;
+
+    margin-top:36px;
+
+}
+
+.experience-save,
+
+.experience-delete{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:15px 26px;
+
+    border-radius:14px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    transition:.3s ease;
+
+}
+
+.experience-save{
+
+    background:linear-gradient(
+
+        135deg,
+
+        #6366F1,
+
+        #3B82F6
+
+    );
+
+    color:#FFFFFF;
+
+    box-shadow:
+
+        0 16px 28px rgba(99,102,241,.22);
+
+}
+
+.experience-save:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.experience-delete{
+
+    background:#FEE2E2;
+
+    color:#DC2626;
+
+}
+
+.experience-delete:hover{
+
+    background:#FECACA;
+
+}
+/*==================================================
+LOADING
+==================================================*/
+
+.experience-loading{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-height:350px;
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    color:#6366F1;
+
+}
+
+/*==================================================
+SMALL TEXT
+==================================================*/
+
+.experience-image-section small{
+
+    color:#64748B;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    text-align:center;
+
+    word-break:break-word;
+
+    max-width:220px;
+
+}
+
+/*==================================================
+SCROLLBAR
+==================================================*/
+
+.experience-form textarea::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.experience-form textarea::-webkit-scrollbar-thumb{
+
+    background:#CBD5E1;
+
+    border-radius:20px;
+
+}
+
+.experience-form textarea::-webkit-scrollbar-thumb:hover{
+
+    background:#94A3B8;
+
+}
+
+/*==================================================
+HOVER EFFECTS
+==================================================*/
+
+.experience-field input:hover,
+
+.experience-field textarea:hover,
+
+.experience-field select:hover{
+
+    border-color:#A5B4FC;
+
+}
+
+.experience-upload-btn:hover,
+
+.experience-add-btn:hover,
+
+.experience-save:hover,
+
+.experience-delete:hover,
+
+.delete-btn:hover,
+
+.experience-refresh:hover,
+
+.experience-add:hover{
+
+    transition:all .3s ease;
+
+}
+
+/*==================================================
+CARD ANIMATION
+==================================================*/
+
+.experience-card{
+
+    animation:experienceFade .45s ease;
+
+}
+
+@keyframes experienceFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:992px){
+
+    .experience-form-header{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .experience-actions{
+
+        width:100%;
+
+        justify-content:flex-start;
+
+        flex-wrap:wrap;
+
+    }
+
+    .experience-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .experience-full{
+
+        grid-column:auto;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .experience-card{
+
+        padding:22px;
+
+    }
+
+    .experience-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .experience-save,
+
+    .experience-delete{
+
+        width:100%;
+
+    }
+
+    .technology-row{
+
+        flex-direction:column;
+
+    }
+
+    .delete-btn{
+
+        width:100%;
+
+        padding:14px;
+
+    }
+
+}
+
+@media(max-width:576px){
+
+    .experience-form-header{
+
+        padding:22px;
+
+    }
+
+    .experience-actions{
+
+        flex-direction:column;
+
+        width:100%;
+
+    }
+
+    .experience-refresh,
+
+    .experience-add{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+    .experience-image-preview{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+    .experience-upload-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+}
