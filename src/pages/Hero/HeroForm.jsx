@@ -14,6 +14,11 @@ import {
     updateHeroData,
     replaceHeroImage,
 } from "../../services/heroAdminService";
+import {
+
+    replaceResume,
+
+} from "../../services/resumeService";
 
 export default function HeroForm() {
 
@@ -22,6 +27,8 @@ export default function HeroForm() {
     const [saving, setSaving] = useState(false);
 
     const [imageFile, setImageFile] = useState(null);
+
+    const [resumeFile, setResumeFile] = useState(null);
 
     const [hero, setHero] = useState({
 
@@ -42,6 +49,8 @@ export default function HeroForm() {
         secondaryButtonText: "",
 
         resumeUrl: "",
+
+        resumePath: "",
 
         professions: [],
 
@@ -106,6 +115,17 @@ export default function HeroForm() {
         setImageFile(e.target.files[0]);
 
     };
+    const handleResumeSelect = (e) => {
+
+    if (!e.target.files.length) return;
+
+    setResumeFile(
+
+        e.target.files[0]
+
+    );
+
+};
 
     const handleSave = async () => {
 
@@ -124,6 +144,23 @@ export default function HeroForm() {
 
             setHero(heroData);
         }
+        if (resumeFile) {
+
+    const result = await replaceResume(
+
+        resumeFile,
+
+        hero.resumePath
+
+    );
+
+    heroData.resumeUrl = result.url;
+
+    heroData.resumePath = result.path;
+
+    setHero(heroData);
+
+}
 
         await updateHeroData(heroData);
         await logActivity({
@@ -460,25 +497,65 @@ export default function HeroForm() {
 
             </div>
 
-            <div className="hero-field">
+            <div className="hero-field hero-full">
 
-                <label>
+    <label>
 
-                    Resume URL
+        Resume PDF
 
-                </label>
+    </label>
 
-                <input
+    <label className="hero-upload-btn">
 
-                    name="resumeUrl"
+        <FiUpload />
 
-                    value={hero.resumeUrl}
+        Upload Resume
 
-                    onChange={handleChange}
+        <input
 
-                />
+            hidden
 
-            </div>
+            type="file"
+
+            accept=".pdf"
+
+            onChange={handleResumeSelect}
+
+        />
+
+    </label>
+
+    {
+
+        resumeFile ? (
+
+            <small>
+
+                {resumeFile.name}
+
+            </small>
+
+        ) : hero.resumeUrl ? (
+
+            <small>
+
+                Resume uploaded successfully.
+
+            </small>
+
+        ) : (
+
+            <small>
+
+                No Resume Uploaded
+
+            </small>
+
+        )
+
+    }
+
+</div>
             
 
         </div>

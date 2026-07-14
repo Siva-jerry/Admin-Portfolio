@@ -76,6 +76,8 @@ export async function updateHeroData(heroData) {
 
             resumeUrl: heroData.resumeUrl,
 
+             resumePath: heroData.resumePath || "",
+
             socials: heroData.socials,
 
             stats: heroData.stats,
