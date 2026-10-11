@@ -135,7 +135,7 @@ export default function Navbar() {
 
                     {/* Live Client Preview Button */}
                     <a
-                        href="http://localhost:5173"
+                        href={import.meta.env.VITE_CLIENT_URL || "https://nimalda-portfolio-inky.vercel.app"}
                         target="_blank"
                         rel="noreferrer"
                         className="header-preview-btn"

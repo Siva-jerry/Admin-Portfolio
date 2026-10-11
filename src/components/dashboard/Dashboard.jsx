@@ -108,7 +108,7 @@ function Dashboard() {
                             <FiArrowRight />
                         </button>
                         <a
-                            href="http://localhost:5173"
+                            href={import.meta.env.VITE_CLIENT_URL || "https://nimalda-portfolio-inky.vercel.app"}
                             target="_blank"
                             rel="noreferrer"
                             className="welcome-btn-ghost"
