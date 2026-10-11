@@ -1120,123 +1120,245 @@ SOCIAL CARD
 }
 
 /*==================================================
-STAT CARD
+HERO STAT CARD (BALANCED & BEAUTIFULLY ALIGNED)
 ==================================================*/
 
-.stats-card{
-
-    display:grid;
-
-    grid-template-columns:
-
-        100px
-
-        140px
-
-        100px
-
-        1fr
-
-        auto;
-
-    gap:16px;
-
-    padding:22px;
-
-    border-radius:18px;
-
-    background:#F8FAFC;
-
-    border:1px solid #E2E8F0;
-
-    transition:.35s ease;
-
+.section-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-.stats-card:hover{
-
-    background:#FFFFFF;
-
-    border-color:#6366F1;
-
-    box-shadow:
-
-        0 15px 35px rgba(99,102,241,.08);
-
+.stats-count-tag {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(99, 102, 241, 0.1);
+    color: #4F46E5;
+    border: 1px solid rgba(99, 102, 241, 0.2);
 }
 
-.stats-card input{
-
-    width:100%;
-
-    padding:14px 16px;
-
-    border-radius:14px;
-
-    border:1px solid #E2E8F0;
-
-    outline:none;
-
-    transition:.3s ease;
-
+.hero-stats-list {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
 }
 
-.stats-card input:focus{
+.hero-stat-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 22px;
+    border-radius: 18px;
+    background: var(--bg-card-subtle, #F8FAFC);
+    border: 1.5px solid var(--border-color, #E2E8F0);
+    box-shadow: 0 4px 16px rgba(15, 23, 42, 0.03);
+    transition: all 0.25s ease;
+}
 
-    border-color:#6366F1;
+.hero-stat-card:hover {
+    border-color: #6366F1;
+    box-shadow: 0 8px 24px rgba(99, 102, 241, 0.08);
+}
 
-    box-shadow:
+.hero-stat-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color, #E2E8F0);
+}
 
-        0 0 0 4px rgba(99,102,241,.10);
+.stat-card-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
+.stat-number {
+    font-size: 12px;
+    font-weight: 800;
+    color: #FFFFFF;
+    background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+    padding: 3px 9px;
+    border-radius: 7px;
+    box-shadow: 0 2px 6px rgba(79, 70, 229, 0.3);
+}
+
+.stat-tag-label {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--text-primary, #0F172A);
+    letter-spacing: -0.01em;
+}
+
+.stat-delete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 14px;
+    height: 34px;
+    border-radius: 10px;
+    font-size: 12.5px;
+    font-weight: 700;
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    background: rgba(239, 68, 68, 0.08);
+    color: #DC2626;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stat-delete-btn svg {
+    font-size: 14px;
+    color: #DC2626;
+    transition: transform 0.2s ease;
+}
+
+.stat-delete-btn:hover {
+    background: #DC2626;
+    color: #FFFFFF;
+    border-color: #DC2626;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(220, 38, 38, 0.25);
+}
+
+.stat-delete-btn:hover svg {
+    color: #FFFFFF;
+    transform: scale(1.1);
+}
+
+.hero-stat-body {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.hero-stat-top-row {
+    display: grid;
+    grid-template-columns: 140px 140px 1fr;
+    gap: 14px;
+    align-items: start;
+}
+
+.stat-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.stat-input-group label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted, #64748B);
+}
+
+.stat-input-group input {
+    width: 100%;
+    height: 42px;
+    padding: 0 14px;
+    border-radius: 12px;
+    border: 1.5px solid var(--input-border, #E2E8F0);
+    background: var(--input-bg, #FFFFFF);
+    color: var(--text-primary, #0F172A);
+    font-size: 13.5px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.stat-input-group input:focus {
+    border-color: #6366F1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.stat-icon-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 3px;
+}
+
+.stat-icon-chip {
+    padding: 2px 7px;
+    border-radius: 6px;
+    font-size: 10.5px;
+    font-weight: 600;
+    background: var(--bg-card, #FFFFFF);
+    color: #6366F1;
+    border: 1px solid var(--border-color, #E2E8F0);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.stat-icon-chip:hover,
+.stat-icon-chip.active {
+    background: #6366F1;
+    color: #FFFFFF;
+    border-color: #6366F1;
+}
+
+@media (max-width: 768px) {
+    .hero-stat-top-row {
+        grid-template-columns: 1fr 1fr;
+    }
+    .stat-title-group {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-stat-top-row {
+        grid-template-columns: 1fr;
+    }
+    .stat-title-group {
+        grid-column: span 1;
+    }
 }
 
 /*==================================================
 DELETE BUTTON
 ==================================================*/
 
-.delete-btn{
-
-    border:none;
-
-    cursor:pointer;
-
-    min-width:90px;
-
-    padding:14px 18px;
-
-    border-radius:14px;
-
-    font-size:.9rem;
-
-    font-weight:700;
-
-    color:#FFFFFF;
-
-    background:
-
-        linear-gradient(
-
-            135deg,
-
-            #EF4444,
-
-            #DC2626
-
-        );
-
-    transition:.35s ease;
-
+.delete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1.5px solid #FEE2E2;
+    cursor: pointer;
+    min-width: 95px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #DC2626;
+    background: #FEF2F2;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.delete-btn:hover{
+.delete-btn svg {
+    font-size: 15px;
+    color: #DC2626;
+    transition: transform 0.2s ease;
+}
 
-    transform:translateY(-2px);
+.delete-btn:hover {
+    background: #DC2626;
+    color: #FFFFFF;
+    border-color: #DC2626;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -3px rgba(220, 38, 38, 0.35);
+}
 
-    box-shadow:
-
-        0 16px 28px rgba(239,68,68,.28);
-
+.delete-btn:hover svg {
+    color: #FFFFFF;
+    transform: scale(1.1);
 }
 
 /*==================================================

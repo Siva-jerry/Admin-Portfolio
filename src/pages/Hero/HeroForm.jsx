@@ -7,6 +7,7 @@ import {
     FiSave,
     FiUpload,
     FiRefreshCw,
+    FiTrash2,
 } from "react-icons/fi";
 
 import {
@@ -15,10 +16,9 @@ import {
     replaceHeroImage,
 } from "../../services/heroAdminService";
 import {
-
     replaceResume,
-
 } from "../../services/resumeService";
+import { showConfirm } from "../../utils/alert";
 
 export default function HeroForm() {
 
@@ -819,187 +819,165 @@ export default function HeroForm() {
 
 {/* ================= STATS ================= */}
 
-<div className="hero-section">
+<div className="hero-section hero-stats-section">
 
     <div className="hero-section-header">
 
-        <h3>
-
-            Hero Stats
-
-        </h3>
+        <div className="section-title-group">
+            <h3>Hero Stats</h3>
+            <span className="stats-count-tag">{hero.stats?.length || 0} active</span>
+        </div>
 
         <button
-
             type="button"
-
             className="hero-add-btn"
-
             onClick={() =>
-
                 setHero({
-
                     ...hero,
-
                     stats: [
-
                         ...hero.stats,
-
                         {
-
-                            icon: "",
-
+                            icon: "award",
                             title: "",
-
                             value: "",
-
                             hover: "",
-
                         },
-
                     ],
-
                 })
-
             }
-
         >
-
             + Add Stat
-
         </button>
 
     </div>
 
-    {
+    <div className="hero-stats-list">
+        {
+            hero.stats.map((stat, index) => (
+                <div className="hero-stat-card" key={index}>
+                    <div className="hero-stat-card-header">
+                        <div className="stat-card-tag">
+                            <span className="stat-number">#{index + 1}</span>
+                            <span className="stat-tag-label">{stat.title || "New Metric"}</span>
+                        </div>
 
-        hero.stats.map((stat, index) => (
+                        <button
+                            type="button"
+                            className="stat-delete-btn"
+                            title="Delete this stat"
+                            onClick={async () => {
+                                const ok = await showConfirm(
+                                    "Delete Stat?",
+                                    "Are you sure you want to delete this stat?",
+                                    "Delete"
+                                );
+                                if (!ok) return;
 
-            <div
-                className="stats-card"
-                key={index}
-            >
+                                const updated = hero.stats.filter(
+                                    (_, i) => i !== index
+                                );
 
-                <input
+                                setHero({
+                                    ...hero,
+                                    stats: updated,
+                                });
+                            }}
+                        >
+                            <FiTrash2 />
+                            <span>Delete</span>
+                        </button>
+                    </div>
 
-                    placeholder="Icon"
+                    <div className="hero-stat-body">
+                        <div className="hero-stat-top-row">
+                            <div className="stat-input-group stat-icon-group">
+                                <label>Icon</label>
+                                <input
+                                    placeholder="award, code, folder, book"
+                                    value={stat.icon}
+                                    onChange={(e) => {
+                                        const updated = [...hero.stats];
+                                        updated[index].icon = e.target.value;
+                                        setHero({
+                                            ...hero,
+                                            stats: updated,
+                                        });
+                                    }}
+                                />
+                                <div className="stat-icon-chips">
+                                    {["award", "code", "folder", "book"].map((iconName) => (
+                                        <button
+                                            type="button"
+                                            key={iconName}
+                                            className={`stat-icon-chip ${stat.icon === iconName ? "active" : ""}`}
+                                            onClick={() => {
+                                                const updated = [...hero.stats];
+                                                updated[index].icon = iconName;
+                                                setHero({
+                                                    ...hero,
+                                                    stats: updated,
+                                                });
+                                            }}
+                                        >
+                                            {iconName}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
 
-                    value={stat.icon}
+                            <div className="stat-input-group stat-value-group">
+                                <label>Metric / Value</label>
+                                <input
+                                    placeholder="e.g. 15+, 99%, 4.9"
+                                    value={stat.value}
+                                    onChange={(e) => {
+                                        const updated = [...hero.stats];
+                                        updated[index].value = e.target.value;
+                                        setHero({
+                                            ...hero,
+                                            stats: updated,
+                                        });
+                                    }}
+                                />
+                            </div>
 
-                    onChange={(e) => {
+                            <div className="stat-input-group stat-title-group">
+                                <label>Stat Title</label>
+                                <input
+                                    placeholder="e.g. Completed Projects"
+                                    value={stat.title}
+                                    onChange={(e) => {
+                                        const updated = [...hero.stats];
+                                        updated[index].title = e.target.value;
+                                        setHero({
+                                            ...hero,
+                                            stats: updated,
+                                        });
+                                    }}
+                                />
+                            </div>
+                        </div>
 
-                        const updated = [...hero.stats];
-
-                        updated[index].icon = e.target.value;
-
-                        setHero({
-                            ...hero,
-                            stats: updated,
-                        });
-
-                    }}
-
-                />
-
-                <input
-
-                    placeholder="Title"
-
-                    value={stat.title}
-
-                    onChange={(e) => {
-
-                        const updated = [...hero.stats];
-
-                        updated[index].title = e.target.value;
-
-                        setHero({
-                            ...hero,
-                            stats: updated,
-                        });
-
-                    }}
-
-                />
-
-                <input
-
-                    placeholder="Value"
-
-                    value={stat.value}
-
-                    onChange={(e) => {
-
-                        const updated = [...hero.stats];
-
-                        updated[index].value = e.target.value;
-
-                        setHero({
-                            ...hero,
-                            stats: updated,
-                        });
-
-                    }}
-
-                />
-
-                <input
-
-                    placeholder="Hover"
-
-                    value={stat.hover}
-
-                    onChange={(e) => {
-
-                        const updated = [...hero.stats];
-
-                        updated[index].hover = e.target.value;
-
-                        setHero({
-                            ...hero,
-                            stats: updated,
-                        });
-
-                    }}
-
-                />
-
-                <button
-
-                    type="button"
-
-                    className="delete-btn"
-
-                    onClick={() => {
-
-    const ok = window.confirm(
-        "Are you sure you want to delete this stat?"
-    );
-
-    if (!ok) return;
-
-    const updated = hero.stats.filter(
-        (_, i) => i !== index
-    );
-
-    setHero({
-        ...hero,
-        stats: updated,
-    });
-
-}}
-
-                >
-
-                    Delete
-
-                </button>
-
-            </div>
-
-        ))
-
-    }
+                        <div className="stat-input-group stat-hover-group">
+                            <label>Hover Description</label>
+                            <input
+                                placeholder="e.g. Delivered across diverse modern web applications"
+                                value={stat.hover}
+                                onChange={(e) => {
+                                    const updated = [...hero.stats];
+                                    updated[index].hover = e.target.value;
+                                    setHero({
+                                        ...hero,
+                                        stats: updated,
+                                    });
+                                }}
+                            />
+                        </div>
+                    </div>
+                </div>
+            ))
+        }
+    </div>
 
 </div>
 

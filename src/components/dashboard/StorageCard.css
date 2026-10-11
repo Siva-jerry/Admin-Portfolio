@@ -1,161 +1,122 @@
 /*==================================================
-STORAGE CARD
+STORAGE CARD (LIGHT THEME)
 ==================================================*/
 
-.storage-card{
-
-    background:#FFFFFF;
-
-    border-radius:24px;
-
-    padding:28px;
-
-    border:1px solid rgba(99,102,241,.08);
-
-    box-shadow:0 20px 45px rgba(15,23,42,.06);
-
-    animation:storageFade .5s ease;
-
+.storage-card {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 30px;
+    border: 1px solid rgba(226, 232, 240, 0.85);
+    box-shadow:
+        0 10px 30px -5px rgba(15, 23, 42, 0.04),
+        0 1px 3px rgba(15, 23, 42, 0.02);
 }
 
-.storage-header{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    margin-bottom:28px;
-
+.storage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
 }
 
-.storage-header h2{
-
-    font-size:1.5rem;
-
-    font-weight:700;
-
-    color:#1E293B;
-
+.storage-header h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #0F172A;
+    letter-spacing: -0.02em;
 }
 
-.storage-header svg{
-
-    font-size:28px;
-
-    color:#4F46E5;
-
+.storage-header svg {
+    font-size: 24px;
+    color: #4F46E5;
+    background: #EEF2FF;
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
 }
 
-.storage-list{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:18px;
-
+.storage-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.storage-item{
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:16px 18px;
-
-    background:#F8FAFC;
-
-    border-radius:16px;
-
-    transition:.35s ease;
-
+.storage-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.storage-item:hover{
-
-    transform:translateX(6px);
-
-    background:#EEF2FF;
-
+.storage-item:hover {
+    background: #FFFFFF;
+    border-color: #CBD5E1;
+    transform: translateX(4px);
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
 }
 
-.storage-item span{
-
-    color:#64748B;
-
-    font-size:.95rem;
-
-    font-weight:500;
-
+.storage-item span {
+    color: #64748B;
+    font-size: 13px;
+    font-weight: 600;
 }
 
-.storage-item strong{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
-
-    color:#1E293B;
-
-    font-size:.95rem;
-
-    font-weight:700;
-
+.storage-item strong {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #0F172A;
+    font-size: 13px;
+    font-weight: 700;
 }
 
-.storage-success{
-
-    color:#16A34A !important;
-
+.storage-success {
+    color: #059669 !important;
 }
 
-@keyframes storageFade{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(20px);
-
+@media (max-width: 640px) {
+    .storage-card {
+        padding: 20px;
     }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
 }
 
-@media(max-width:768px){
-
-    .storage-card{
-
-        padding:22px;
-
-    }
-
+/*==================================================
+DARK THEME (STORAGE CARD)
+==================================================*/
+[data-theme="dark"] .storage-card {
+    background: #111827;
+    border-color: rgba(51, 65, 85, 0.7);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
 }
 
-@media(max-width:576px){
+[data-theme="dark"] .storage-header h2 {
+    color: #F8FAFC;
+}
 
-    .storage-item{
+[data-theme="dark"] .storage-header svg {
+    color: #818CF8;
+    background: #1E1B4B;
+}
 
-        flex-direction:column;
+[data-theme="dark"] .storage-item {
+    background: #1A2234;
+    border-color: #334155;
+}
 
-        align-items:flex-start;
+[data-theme="dark"] .storage-item:hover {
+    background: #243048;
+    border-color: #6366F1;
+}
 
-        gap:8px;
+[data-theme="dark"] .storage-item span {
+    color: #94A3B8;
+}
 
-    }
-
+[data-theme="dark"] .storage-item strong {
+    color: #F8FAFC;
 }
